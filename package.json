@@ -1,0 +1,36 @@
+{
+  "name": "coderkearns.date",
+  "version": "1.0.0",
+  "description": "Minimal VSCode extension for pasting today's dates in various formats",
+  "author": "Carter Kearns <coder.kearns@gmail.com> (https://github.com/coderkearns)",
+  "engines": {
+    "vscode": "^1.32.0"
+  },
+  "main": "extension.js",
+  "activationEvents": [
+    "onCommand:date.paste",
+    "onCommand:date.paste.iso",
+    "onCommand:date.paste.locale",
+    "onCommand:date.paste.gmt"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "date.paste",
+        "title": "Date: Paste today's date in the default format (month day, year)"
+      },
+      {
+        "command": "date.paste.iso",
+        "title": "Date: Paste today's date in ISO format (YYYY-MM-DD)"
+      },
+      {
+        "command": "date.paste.locale",
+        "title": "Date: Paste today's date in locale format (month/day/year, hour:minute:second [AM/PM])"
+      },
+      {
+        "command": "date.paste.gmt",
+        "title": "Date: Paste today's date in GMT format (weekday, day month year hour:minute:second GMT)"
+      }
+    ]
+  }
+}
