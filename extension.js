@@ -39,7 +39,10 @@ function date() {
 // ISO Format: YYYY-MM-DD
 function dateISO() {
     const now = today();
-    return `${now.getFullYear()} -${now.getMonth() + 1} -${now.getDate()}`;
+    const year = now.getFullYear();
+    const monthNumber = now.getMonth() + 1;
+    const day = now.getDate();
+    return `${year}-${monthNumber < 10 ? '0' + monthNumber : monthNumber}-${day < 10 ? '0' + day : day}`;
 }
 
 // Locale Format: monthNumber/day/year, hour:minute:second [AM/PM])
